@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="textBox(this)">
+    <button onclick="unshift()">unshift</button>
+    <button onclick="push()">push</button>
+    <button onclick="pop()">pop</button>
+    <button onclick="shift()">shift</button>
+    <button onclick="join()">join</button>
+    <button onclick="reverse()">reverse</button> 
+    
+    <button onclick="display()">display</button>
+    <span id="result"></span>
+
+    <script>
+        let textArray = [];
+        let name;
+        let result = document.getElementById("result");
+        function textBox(obj){
+            name = obj.value;
+        }
+        function unshift(){
+            textArray.unshift(name);
+           
+        }
+        function push(){
+            textArray.push(name);
+            
+        }
+        function pop(){
+            if(textArray.length>0){
+                textArray.pop(name);
+            }
+        }
+        function shift(){
+            if(textArray.length>0){
+                textArray.shift(name);
+            }
+        }
+       
+        function reverse(){
+            textArray.reverse(textArray.length);
+        }
+       
+        function display(){
+            result.innerText = textArray;
+        }
+    </script>
+</body>
+</html>

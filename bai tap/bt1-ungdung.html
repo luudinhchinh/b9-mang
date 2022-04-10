@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // bài 1
+        let myColor = ['red','green', 'yellow', 'black'];
+        myColor.join('');
+        document.write(myColor);
+        document.write("</br>")
+        // bài 2
+        let text = prompt('nhập vào một chuỗi')
+        let hoa = text.toUpperCase();
+        document.write(hoa);
+        // bài 3
+        let message = 'The Quick Brown Fox';
+        let strArr = message.split("");
+        for(let i=0;i<strArr.length;i++){
+            if(message==strArr[i]){
+                strArr[i]=strArr[i].toLowerCase();
+                strArr[i]=strArr[i].toUpperCase();
+            }
+            console.log("message");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>nhập vào đây</h3>
+        <textarea name="" id="textBox" onkeyup="nhap()" cols="30" rows="10"></textarea>
+    </div>
+    <script>
+        let text = "chào tất cả mọi người !!!"
+        let a = document.getElementById("textBox");
+        let index = 0;
+        let str = '';
+        function nhap(){
+          str+=text[index];
+          index++;
+          
+          if(index>=text.length){
+              index=0;
+              str='';
+          }
+          a.value=str;
+        }
+    </script>
+</body>
+</html>

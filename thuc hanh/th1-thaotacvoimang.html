@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>sample screen</h3>
+        <input type="text" id="textBox">
+        <button onclick="add()">add</button>
+        <button onclick="display()">display</button>
+        
+    </div>
+    <hr>
+    <span id="result"></span>
+    <script>
+        let textArray = [];
+        function add(){
+            let text = document.getElementById('textBox').value;
+            textArray.push(text);
+        }
+        function display(){
+            let str = '';
+            for(let i=0;i<textArray.length;i++){
+                str += '<p> element'+i+'='+textArray[i]+'</p>'
+            }
+            document.getElementById("result").innerText=str;
+            
+        }
+    </script>
+</body>
+</html>
